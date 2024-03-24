@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body{
+    background-color: rgba(13, 7, 20, 1)
+}
+
+.webpageContainer{
+    min-width: 1440px;
+    background-color: rgba(13, 7, 20, 1);
+}
+
+.todoAppContainer{
+    width: 583px;
+    background-color: rgba(29, 24, 37, 1);
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 109px;
+    padding-top: 50px;
+    padding-left: 65px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+form{
+    display: flex;
+    gap: 11px;
+
+    >input{
+        border-radius: 10px;
+        width: 381px;
+        height: 40px;
+        border: 1px solid rgba(158, 120, 207, 1);
+        padding: 11px 0px 10px 10px;
+        background-color: rgba(29, 24, 37, 1);
+        outline: none;
+        color: rgba(119, 119, 119, 1);
+    }
+
+    >button{
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        background-color: rgba(158, 120, 207, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+.tasksToBeDoneContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    
+
+    >.tasksToBeDoneHeader{
+        color: rgba(255, 255, 255, 1);
+    }
+
+    >.taskToBeDoneContainer{
+        width: 432px;
+        height: 75px;
+        background-color: rgba(21, 16, 28, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+
+        >.taskToBeDone{
+            display: flex;
+            gap: 101px;
+            align-items: center;
+            min-height: 75px;
+
+            >p{
+                color: rgba(158, 120, 207, 1);
+                width: 221px;
+            }
+
+            >.taskDoneAndtaskDeleteContainer{
+                display: flex;
+                gap: 8px;
+
+                >button{
+                    width: 32px;
+                    height: 32px;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+}
+
+.doneTasksContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    
+
+    >.doneTasksHeader{
+        color: rgba(255, 255, 255, 1);
+    }
+
+    >.doneTaskContainer{
+        width: 432px;
+        height: 75px;
+        background-color: rgba(21, 16, 28, 1);
+        display: flex;
+        padding-left: 21.05px;
+        align-items: center;
+        border-radius: 10px;
+
+        >.doneTask{
+            display: flex;
+
+            >p{
+                color: rgba(120, 207, 176, 1);
+                text-decoration: line-through;
+            }
+        }
+    }
+}
