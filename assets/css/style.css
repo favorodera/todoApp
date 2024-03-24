@@ -11,11 +11,14 @@
 }
 
 body{
-    background-color: rgba(13, 7, 20, 1)
+    background-color: rgba(13, 7, 20, 1);
+    min-width: 1440px;
+    height: auto;
 }
 
 .webpageContainer{
-    min-width: 1440px;
+    
+    height: 100%;
     background-color: rgba(13, 7, 20, 1);
 }
 
@@ -28,6 +31,7 @@ body{
     padding-top: 50px;
     padding-left: 65px;
     padding-bottom: 50px;
+    padding-right: 86px;
     display: flex;
     flex-direction: column;
     gap: 60px;
