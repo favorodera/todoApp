@@ -20,8 +20,6 @@ form.addEventListener("submit", function addNewTask(event) {
 
         document.querySelector(".errorMessage").innerHTML = "Please Input Task";
 
-        document.querySelector(".errorMessage").style.fontSize = "13px"
-
         return
     }
 
