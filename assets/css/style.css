@@ -12,17 +12,16 @@
 
 body{
     background-color: rgba(13, 7, 20, 1);
-    min-width: 1440px;
-    height: auto;
+    max-width: 1440px;
 }
 
 .webpageContainer{
-    
-    height: 100%;
+    margin: auto;
     background-color: rgba(13, 7, 20, 1);
 }
 
 .todoAppContainer{
+    margin: auto;
     width: 583px;
     background-color: rgba(29, 24, 37, 1);
     border-radius: 20px;
