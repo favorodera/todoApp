@@ -16,12 +16,14 @@ function clearErrorMessage() {
 form.addEventListener("submit", function addNewTask(event) {
     event.preventDefault()
 
+
     if (document.querySelector(".newTaskInput").value == "") {
 
         document.querySelector(".errorMessage").innerHTML = "Please Input Task";
 
         return
     }
+
 
     let taskToBeDoneContainer = document.createElement("div");
     taskToBeDoneContainer.setAttribute("class", "taskToBeDoneContainer");
@@ -85,8 +87,6 @@ form.addEventListener("submit", function addNewTask(event) {
             return
         }
     })
-
-
 
 
     let taskDoneClicked = false;
