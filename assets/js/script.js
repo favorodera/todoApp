@@ -8,8 +8,22 @@ let doneTasksCounter = document.querySelector(".doneTasksCounter");
 let counterDone = 0;
 
 
+function clearErrorMessage() {
+    document.querySelector(".errorMessage").innerHTML = "";
+};
+
+
 form.addEventListener("submit", function addNewTask(event) {
     event.preventDefault()
+
+    if (document.querySelector(".newTaskInput").value == "") {
+
+        document.querySelector(".errorMessage").innerHTML = "Please Input Task";
+
+        document.querySelector(".errorMessage").style.fontSize = "13px"
+
+        return
+    }
 
     let taskToBeDoneContainer = document.createElement("div");
     taskToBeDoneContainer.setAttribute("class", "taskToBeDoneContainer");
@@ -77,7 +91,6 @@ form.addEventListener("submit", function addNewTask(event) {
 
 
 
-
     let taskDoneClicked = false;
     taskDone.addEventListener("click", function taskDone(event) {
         event.preventDefault()
@@ -106,12 +119,13 @@ form.addEventListener("submit", function addNewTask(event) {
 
             let taskDone = document.createElement("p");
             taskDone.setAttribute("class", "taskDone")
-            taskDone.innerHTML = document.querySelector(".task").value;
+            taskDone.innerHTML = task.innerHTML;
             doneTask.append(taskDone);
-
 
             return
         }
     })
+
+    
 })
 

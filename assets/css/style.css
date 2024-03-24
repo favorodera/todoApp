@@ -38,6 +38,7 @@ body{
 
 form{
     display: flex;
+    flex-wrap: wrap;
     gap: 11px;
 
     >input{
@@ -62,6 +63,10 @@ form{
         justify-content: center;
         cursor: pointer;
         outline: none;
+    }
+
+    >.errorMessage{
+        color: red;
     }
 }
 
@@ -88,7 +93,6 @@ form{
             display: flex;
             gap: 101px;
             align-items: center;
-            min-height: 75px;
 
             >p{
                 color: rgba(158, 120, 207, 1);
