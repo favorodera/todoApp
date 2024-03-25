@@ -7,15 +7,6 @@ let counterToBeDone = 0;
 let doneTasksCounter = document.querySelector(".doneTasksCounter");
 let counterDone = 0;
 
-(function loadTasks() {
-    const tasksJSON = localStorage.getItem("toDoList");
-    if (tasksJSON) {
-      return JSON.parse(tasksJSON);
-    } else {
-      return []; // Return an empty array if no tasks are stored
-    }
-  })()
-
 
 function clearErrorMessage() {
     document.querySelector(".errorMessage").innerHTML = "";
@@ -78,12 +69,7 @@ form.addEventListener("submit", function addNewTask(event) {
     counterToBeDone += 1;
     tasksToBeDoneCounter.innerHTML = counterToBeDone;
 
-    document.querySelector(".newTaskInput").value = ""
-
-    (function saveTasks(tasks) {
-        const tasksJSON = JSON.stringify(tasks);
-        localStorage.setItem("toDoList", tasksJSON);
-    })()
+    document.querySelector(".newTaskInput").value = "";
 
 
     let taskDeleteClicked = false;
