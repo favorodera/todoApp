@@ -12,10 +12,10 @@
 
 body{
     background-color: rgba(13, 7, 20, 1);
-    max-width: 1440px;
 }
 
 .webpageContainer{
+    max-width: 1440px;
     margin: auto;
     background-color: rgba(13, 7, 20, 1);
 }
@@ -27,10 +27,7 @@ body{
     border-radius: 20px;
     margin: auto;
     margin-top: 109px;
-    padding-top: 50px;
-    padding-left: 65px;
-    padding-bottom: 50px;
-    padding-right: 86px;
+    padding: 50px 86px 50px 65px;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -91,8 +88,9 @@ form{
         border-radius: 10px;
 
         >.taskToBeDone{
+            width: 391px;
             display: flex;
-            gap: 101px;
+            justify-content: space-between;
             align-items: center;
 
             >p{
@@ -118,6 +116,7 @@ form{
 }
 
 .doneTasksContainer{
+    width: 391px;
     display: flex;
     flex-direction: column;
     gap: 17px;
@@ -144,12 +143,4 @@ form{
             }
         }
     }
-}
-
-
-@media only screen and (min-width: 1441px) {
-    body{
-        min-width: 100vw;
-    }
-    
 }
