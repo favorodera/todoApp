@@ -1,22 +1,31 @@
+// Selects the form
 let form = document.querySelector(".addNewTaskForm");
 
+
+// Selects,creates a variable for the yet to be done tasks and sets the counter to zero
 let tasksToBeDoneCounter = document.querySelector(".tasksToBeDoneCounter");
 let counterToBeDone = 0;
 
 
+// Selects,creates a variable for the completed tasks and sets the counter to zero
 let doneTasksCounter = document.querySelector(".doneTasksCounter");
 let counterDone = 0;
 
 
+// Function for clearing the error message
 function clearErrorMessage() {
     document.querySelector(".errorMessage").innerHTML = "";
 };
 
 
+// An event listner is added to the form
 form.addEventListener("submit", function addNewTask(event) {
+
+    // Disrupts the default actions of the form when a submit action or event occurs
     event.preventDefault()
 
 
+    // A check on wether a value was added to the input before submission
     if (document.querySelector(".newTaskInput").value == "") {
 
         document.querySelector(".errorMessage").innerHTML = "Please Input Task";
@@ -24,7 +33,11 @@ form.addEventListener("submit", function addNewTask(event) {
         return
     }
 
+    
+    // IF A VALUE WAS ADDED THE ACTIONS (THAT IS, A TODO TASK IS CREATED) BELOW TAKES PLACE
 
+
+    // A div element is created and appended to element with the "tasksToBeDoneContainer" class
     let taskToBeDoneContainer = document.createElement("div");
     taskToBeDoneContainer.setAttribute("class", "taskToBeDoneContainer");
     document.querySelector(".tasksToBeDoneContainer").append(taskToBeDoneContainer);
