@@ -81,12 +81,14 @@ form{
 
     >.taskToBeDoneContainer{
         width: 432px;
-        height: 75px;
+        min-height: 75px;
+        max-height: max-content;
         background-color: rgba(21, 16, 28, 1);
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 10px;
+        
 
         >.taskToBeDone{
             width: 391px;
@@ -97,6 +99,7 @@ form{
             >p{
                 color: rgba(158, 120, 207, 1);
                 width: 221px;
+                overflow-wrap: break-word;
             }
 
             >.taskDoneAndtaskDeleteContainer{
@@ -117,23 +120,36 @@ form{
 }
 
 .doneTasksContainer{
-    width: 391px;
     display: flex;
     flex-direction: column;
     gap: 17px;
 
     >.doneTasksHeader{
         color: rgba(255, 255, 255, 1);
+        
+
+        >.clearDoneTaskButton{
+            float: right;
+            width: 50px;
+            height: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(158, 120, 207, 1);
+            display: none;
+            cursor: pointer;
+        }
     }
 
     >.doneTaskContainer{
         width: 432px;
-        height: 75px;
+        min-height: 75px;
+        max-height: max-content;
         background-color: rgba(21, 16, 28, 1);
         display: flex;
         padding-left: 21.05px;
         align-items: center;
         border-radius: 10px;
+        overflow-wrap: break-word;
 
         >.doneTask{
             display: flex;
@@ -141,6 +157,8 @@ form{
             >p{
                 color: rgba(120, 207, 176, 1);
                 text-decoration: line-through;
+                overflow-wrap: break-word;
+                width: 391px;
             }
         }
     }

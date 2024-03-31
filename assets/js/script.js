@@ -108,6 +108,28 @@ form.addEventListener("submit", function addNewTask(event) {
             taskDone.innerHTML = task.innerHTML;
             doneTask.append(taskDone);
 
+            let clearDoneTaskButton = document.querySelector(".clearDoneTaskButton")
+            clearDoneTaskButton.style.display = "block"
+
+            let clearDoneTaskButtonClicked = false;
+            clearDoneTaskButton.addEventListener("click", function clearDoneTask() {
+                event.preventDefault()
+
+                clearDoneTaskButtonClicked = true;
+
+                if (clearDoneTaskButtonClicked == true) {
+                    doneTaskContainer.remove()
+                    
+                    doneTasksCounter.innerHTML = "0";
+                    counterDone = 0;
+
+                    clearDoneTaskButton.style.display = "none"
+
+                    return
+                }
+            })
+
+
             return
         }
     })
