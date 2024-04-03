@@ -194,10 +194,6 @@ form {
     .tasksToBeDoneContainer {
         width: 250px;
     
-        >.tasksToBeDoneHeader {
-            color: rgba(255, 255, 255, 1);
-        }
-    
         >.taskToBeDoneContainer {
             width: 250px;
 
