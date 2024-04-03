@@ -12,19 +12,19 @@
 }
 
 body {
-    background-color: rgba(13, 7, 20, 1);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .webpageContainer {
     max-width: 1440px;
     margin: auto;
-    background-color: rgba(13, 7, 20, 1);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .todoAppContainer {
     margin: auto;
     width: 583px;
-    background-color: rgba(29, 24, 37, 1);
+    background-color: rgba(238, 238, 238, 1);
     border-radius: 20px;
     margin: auto;
     margin-top: 109px;
@@ -43,9 +43,9 @@ form {
         border-radius: 10px;
         width: 381px;
         height: 40px;
-        border: 1px solid rgba(158, 120, 207, 1);
+        border: 1px solid rgba(30, 169, 83, 1);
         padding: 11px 0px 10px 10px;
-        background-color: rgba(29, 24, 37, 1);
+        background-color: rgba(238, 238, 238, 1);
         outline: none;
         color: rgba(119, 119, 119, 1);
     }
@@ -55,7 +55,7 @@ form {
         height: 40px;
         border: none;
         border-radius: 10px;
-        background-color: rgba(158, 120, 207, 1);
+        background-color: rgba(30, 169, 83, 1);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -76,14 +76,14 @@ form {
     gap: 17px;
 
     >.tasksToBeDoneHeader {
-        color: rgba(255, 255, 255, 1);
+        color: rgba(0, 0, 0, 1);
     }
 
     >.taskToBeDoneContainer {
         width: 432px;
         min-height: 75px;
         max-height: max-content;
-        background-color: rgba(21, 16, 28, 1);
+        background-color: rgba(255, 255, 255, 1);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -97,7 +97,7 @@ form {
             align-items: center;
 
             >p {
-                color: rgba(158, 120, 207, 1);
+                color: rgba(30, 169, 83, 1);
                 width: 221px;
                 overflow-wrap: break-word;
             }
@@ -125,7 +125,7 @@ form {
     gap: 17px;
 
     >.doneTasksHeader {
-        color: rgba(255, 255, 255, 1);
+        color: rgba(0, 0, 0, 1);
 
 
         >.clearDoneTaskButton {
@@ -134,9 +134,10 @@ form {
             height: 20px;
             border: none;
             border-radius: 5px;
-            background-color: rgba(158, 120, 207, 1);
+            background-color: rgba(30, 169, 83, 1);
             display: none;
             cursor: pointer;
+            color: rgba(255, 255, 255, 1);;
         }
     }
 
@@ -144,7 +145,7 @@ form {
         width: 432px;
         min-height: 75px;
         max-height: max-content;
-        background-color: rgba(21, 16, 28, 1);
+        background-color: rgba(255, 255, 255, 1);
         display: flex;
         padding-left: 21.05px;
         align-items: center;
@@ -155,7 +156,7 @@ form {
             display: flex;
 
             >p {
-                color: rgba(120, 207, 176, 1);
+                color: rgb(158, 48, 21);
                 text-decoration: line-through;
                 overflow-wrap: break-word;
                 width: 391px;
@@ -193,10 +194,6 @@ form {
     
     .tasksToBeDoneContainer {
         width: 250px;
-    
-        >.tasksToBeDoneHeader {
-            color: rgba(255, 255, 255, 1);
-        }
     
         >.taskToBeDoneContainer {
             width: 250px;
