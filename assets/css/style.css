@@ -11,18 +11,17 @@
     font-weight: 400;
 }
 
-body {
-    background-color: rgba(13, 7, 20, 1);
-}
-
+body,
 .webpageContainer {
-    max-width: 1440px;
-    margin: auto;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(13, 7, 20, 1);
 }
 
 .todoAppContainer {
-    margin: auto;
     width: 583px;
     background-color: rgba(29, 24, 37, 1);
     border-radius: 20px;
@@ -171,54 +170,54 @@ form {
     .webpageContainer {
         max-width: 320px;
     }
-    
+
     .todoAppContainer {
         width: 295px;
         margin: auto;
         margin-top: 109px;
         padding: 24px;
     }
-    
+
     form {
         width: 250px;
         justify-content: space-between;
-    
+
         >input {
             width: 197px;
 
         }
-    
+
     }
-    
+
     .tasksToBeDoneContainer {
         width: 250px;
-    
+
         >.taskToBeDoneContainer {
             width: 250px;
 
             >.taskToBeDone {
                 width: 235px;
-    
+
                 >p {
                     width: 152px;
                 }
-    
+
                 >.taskDoneAndtaskDeleteContainer {
                     justify-content: space-between;
                 }
             }
         }
     }
-    
+
     .doneTasksContainer {
         width: 250px;
-    
+
         >.doneTaskContainer {
             width: 250px;
             padding-left: 8px;
-    
+
             >.doneTask {
-    
+
                 >p {
 
                     width: 235px;

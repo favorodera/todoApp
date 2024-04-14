@@ -76,79 +76,59 @@ form.addEventListener("submit", function addNewTask(event) {
 
     document.querySelector(".newTaskInput").value = "";
 
-
-    let taskDoneClicked = false;
     taskDone.addEventListener("click", function taskDone(event) {
         event.preventDefault()
 
-        taskDoneClicked = true
 
-        if (taskDoneClicked == true) {
+        counterDone += 1;
+        doneTasksCounter.innerHTML = counterDone;
 
-            counterDone += 1;
-            doneTasksCounter.innerHTML = counterDone;
+        counterToBeDone -= 1;
+        tasksToBeDoneCounter.innerHTML = counterToBeDone;
 
-            counterToBeDone -= 1;
-            tasksToBeDoneCounter.innerHTML = counterToBeDone;
+        taskToBeDoneContainer.remove()
 
-            taskToBeDoneContainer.remove()
-
-            let doneTaskContainer = document.createElement("div");
-            doneTaskContainer.setAttribute("class", "doneTaskContainer");
-            document.querySelector(".doneTasksContainer").append(doneTaskContainer);
+        let doneTaskContainer = document.createElement("div");
+        doneTaskContainer.setAttribute("class", "doneTaskContainer");
+        document.querySelector(".doneTasksContainer").append(doneTaskContainer);
 
 
-            let doneTask = document.createElement("div");
-            doneTask.setAttribute("class", "doneTask");
-            doneTaskContainer.append(doneTask);
+        let doneTask = document.createElement("div");
+        doneTask.setAttribute("class", "doneTask");
+        doneTaskContainer.append(doneTask);
 
 
-            let taskDone = document.createElement("p");
-            taskDone.setAttribute("class", "taskDone")
-            taskDone.innerHTML = task.innerHTML;
-            doneTask.append(taskDone);
+        let taskDone = document.createElement("p");
+        taskDone.setAttribute("class", "taskDone")
+        taskDone.innerHTML = task.innerHTML;
+        doneTask.append(taskDone);
 
-            let clearDoneTaskButton = document.querySelector(".clearDoneTaskButton")
-            clearDoneTaskButton.style.display = "block"
+        let clearDoneTaskButton = document.querySelector(".clearDoneTaskButton")
+        clearDoneTaskButton.style.display = "block"
 
-            let clearDoneTaskButtonClicked = false;
-            clearDoneTaskButton.addEventListener("click", function clearDoneTask() {
-                event.preventDefault()
+        clearDoneTaskButton.addEventListener("click", function clearDoneTask() {
+            event.preventDefault()
 
-                clearDoneTaskButtonClicked = true;
+            doneTaskContainer.remove()
 
-                if (clearDoneTaskButtonClicked == true) {
-                    doneTaskContainer.remove()
-                    
-                    doneTasksCounter.innerHTML = "0";
-                    counterDone = 0;
+            doneTasksCounter.innerHTML = "0";
+            counterDone = 0;
 
-                    clearDoneTaskButton.style.display = "none"
+            clearDoneTaskButton.style.display = "none"
 
-                    return
-                }
-            })
+        })
 
-
-            return
-        }
     })
 
 
-    let taskDeleteClicked = false;
     taskDelete.addEventListener("click", function taskDelete(event) {
         event.preventDefault()
 
-        taskDeleteClicked = true
+        taskToBeDoneContainer.remove()
 
-        if (taskDeleteClicked == true) {
+        counterToBeDone -= 1;
+        tasksToBeDoneCounter.innerHTML = counterToBeDone;
 
-            taskToBeDoneContainer.remove()
-
-            counterToBeDone -= 1;
-            tasksToBeDoneCounter.innerHTML = counterToBeDone;
-            return
-        }
     })
 
     return
